@@ -5,8 +5,10 @@ import Contact from "./components/ContactSection";
 import Footer from "./components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import ThemeProvider from "./context/ThemeContext";
+import ThemeSwitcher from "./context/ThemeSwitcher";
 
-function App() {
+function ThemedApp() {
   return (
     <>
       <div className="bg-[#0f172a] text-white scroll-smooth">
@@ -20,9 +22,19 @@ function App() {
           </Routes>
           <Footer />
         </BrowserRouter>
+
+        <ThemeSwitcher/>
       </div>
     </>
   );
+}
+
+const App = () => {
+  return(
+    <ThemeProvider>
+      <ThemedApp/>
+    </ThemeProvider>
+  )
 }
 
 export default App;
