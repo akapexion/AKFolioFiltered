@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={` ${theme === "light" ? 'bg-white' : 'bg-slate-950/93'}  fixed w-full z-50 transition-all duration-300 backdrop-blur-xl border-b ${
+      className={` ${theme === "light" ? 'bg-white text-black' : 'bg-slate-950/93'}  fixed w-full z-50 transition-all duration-300 backdrop-blur-xl border-b ${
         scrolled
           ? "bg-slate-950/93 border-blue-500/30 shadow-xl"
           : "bg-slate-950/75 border-blue-500/10"
@@ -55,7 +55,7 @@ const Navbar = () => {
           <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-800 to-blue-500 flex items-center justify-center text-white font-extrabold text-xs shadow-lg group-hover:scale-105 transition-transform duration-200">
             AK
           </div>
-          <span className="hidden sm:block font-bold tracking-widest text-white uppercase text-sm">
+          <span className="hidden sm:block font-bold tracking-widest uppercase text-sm">
             Asad Khan
           </span>
         </Link>
