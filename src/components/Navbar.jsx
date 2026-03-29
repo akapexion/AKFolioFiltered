@@ -42,33 +42,26 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 backdrop-blur-xl border-b bg-white/90 text-slate-900 dark:bg-slate-950/93 dark:text-white ${
-        scrolled
-          ? "border-slate-200 dark:border-blue-500/30 shadow-md dark:shadow-xl"
-          : "border-transparent dark:border-blue-500/10"
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 backdrop-blur-xl border-b bg-white/90 text-slate-900 dark:bg-slate-950/93 dark:text-white ${scrolled
+        ? "border-slate-200 dark:border-blue-500/30 shadow-md dark:shadow-xl"
+        : "border-transparent dark:border-blue-500/10"
+        }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between h-17 px-6 h-[68px]">
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-800 to-blue-500 flex items-center justify-center text-white font-extrabold text-xs shadow-lg group-hover:scale-105 transition-transform duration-200">
-            AK
-          </div>
-          <span className="hidden sm:block font-bold tracking-widest uppercase text-sm">
-            Asad Khan
-          </span>
+          <img src="./ak-logo.png" className="dark:invert" width={50} alt="" />
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-1">
           <Link
             to="/"
-            className={`px-4 py-2 text-sm rounded-lg transition-all duration-200 ${
-              isActive("/")
-                ? "text-white bg-blue-500/20 border border-blue-500/30"
-                : "text-gray-400 hover:text-white hover:bg-blue-500/10"
-            }`}
+            className={`px-4 py-2 text-sm rounded-lg transition-all duration-200 ${isActive("/")
+              ? "text-white bg-blue-500/20 border border-blue-500/30"
+              : "text-gray-400 hover:text-white hover:bg-blue-500/10"
+              }`}
           >
             Home
           </Link>
@@ -77,11 +70,10 @@ const Navbar = () => {
             <Link
               key={item}
               to={`/${item.toLowerCase()}`}
-              className={`px-4 py-2 text-sm rounded-lg transition-all duration-200 ${
-                isActive(item)
-                  ? "text-white bg-blue-500/20 border border-blue-500/30"
-                  : "text-gray-400 hover:text-white hover:bg-blue-500/10"
-              }`}
+              className={`px-4 py-2 text-sm rounded-lg transition-all duration-200 ${isActive(item)
+                ? "text-white bg-blue-500/20 border border-blue-500/30"
+                : "text-gray-400 hover:text-white hover:bg-blue-500/10"
+                }`}
             >
               {item}
             </Link>
@@ -92,9 +84,9 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
 
           {/* Timezone */}
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-500/20 bg-slate-900/80">
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-500/20 bg-slate-900/80 dark:bg-slate-950/93 bg-transparent dark:text-white">
             <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></div>
-            <span className="hidden sm:block text-xs tracking-widest uppercase text-gray-500">
+            <span className="hidden sm:block text-xs tracking-widest uppercase text-gray-500 dark:text-white">
               Karachi
             </span>
             <span className="text-xs text-cyan-400 font-mono border-l border-blue-500/20 pl-2">
@@ -128,9 +120,8 @@ const Navbar = () => {
                 <Link
                   key={item}
                   to={path}
-                  className={`py-4 border-b border-blue-500/10 transition-colors duration-200 ${
-                    active ? "text-white" : "text-gray-400 hover:text-white"
-                  }`}
+                  className={`py-4  border-b border-blue-500/10 transition-colors duration-200 ${active ? "text-white" : "text-gray-400 hover:text-white"
+                    }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span className="flex items-center gap-2">

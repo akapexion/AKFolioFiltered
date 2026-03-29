@@ -104,6 +104,47 @@ const Projects = () => {
           pointer-events: none;
         }
 
+        /* Marquee */
+        .marquee-container {
+          overflow: hidden;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: rgba(var(--accent-blue-rgb), 0.05);
+          border-bottom: 1px solid var(--border-subtle);
+          padding: 12px 0;
+          display: flex;
+          white-space: nowrap;
+          z-index: 2;
+        }
+
+        .marquee-content {
+          display: inline-flex;
+          align-items: center;
+          gap: 40px;
+          animation: marquee 25s linear infinite;
+        }
+
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+
+        .marquee-item {
+          font-family: 'Syne', sans-serif;
+          font-size: 14px;
+          font-weight: 800;
+          letter-spacing: 4px;
+          color: var(--accent-blue);
+          text-transform: uppercase;
+        }
+
+        .marquee-star {
+          color: var(--accent-cyan);
+          font-size: 16px;
+        }
+
           .projects-glow {
             position: absolute;
             top: -60px;
@@ -209,6 +250,26 @@ const Projects = () => {
             border-radius: 20px;
             overflow: hidden;
             transition: all 0.4s ease;
+          }
+
+          .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.04), transparent);
+            transform: skewX(-20deg);
+            animation: shimmer 6s infinite;
+            pointer-events: none;
+            z-index: 10;
+          }
+
+          @keyframes shimmer {
+            0% { left: -100%; }
+            20% { left: 200%; }
+            100% { left: 200%; }
           }
 
         .project-card:hover {
@@ -464,7 +525,23 @@ const Projects = () => {
       <section id="projects" className="projects-section">
         <div className="projects-glow" />
 
-        <div className="projects-inner">
+        {/* Infinite Marquee */}
+        <div className="marquee-container">
+          <div className="marquee-content">
+            {[...Array(6)].map((_, i) => (
+              <React.Fragment key={i}>
+                <span className="marquee-item">FEATURED WORKS</span>
+                <span className="marquee-star">✦</span>
+                <span className="marquee-item">MERN STACK LOGIC</span>
+                <span className="marquee-star">✦</span>
+                <span className="marquee-item">RESPONSIVE UI</span>
+                <span className="marquee-star">✦</span>
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+
+        <div className="projects-inner pt-12">
 
           {/* Header */}
           <div className="projects-header">

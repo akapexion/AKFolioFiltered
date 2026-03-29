@@ -53,6 +53,13 @@ const Experience = () => {
         {/* Timeline Container */}
         <div className="relative flex flex-col gap-0 before:content-[''] before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-[1px] before:bg-gradient-to-b before:from-[#4d8ef0] before:via-[#4d8ef0]/10 before:to-transparent sm:before:left-[15px]">
           
+          {/* Animated Glow Tracker */}
+          <motion.div 
+            className="absolute left-[18.2px] top-2 w-[2.5px] h-[80px] bg-gradient-to-b from-transparent via-[#38bdf8] to-transparent sm:left-[14.2px] z-20 shadow-[0_0_12px_#38bdf8]"
+            animate={{ top: ["0%", "90%", "0%"] }}
+            transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
+          />
+          
           {jobs.map((job, index) => (
             <motion.div
               key={index}
@@ -68,7 +75,11 @@ const Experience = () => {
               </div>
 
               {/* Card */}
-              <div className="relative overflow-hidden bg-white/70 dark:bg-[#0a1a33]/50 border border-slate-200 dark:border-[#4d8ef0]/10 rounded-2xl p-7 transition-all duration-300 group-hover:border-[#4d8ef0]/30 group-hover:bg-white dark:group-hover:bg-[#0a1a33]/80 group-hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] dark:group-hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)] group-hover:translate-x-1 sm:p-5 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[3px] before:bg-gradient-to-b before:from-[#4d8ef0] before:to-[#38bdf8] before:opacity-0 group-hover:before:opacity-100 before:transition-opacity">
+              <motion.div 
+                className="relative overflow-hidden bg-white/70 dark:bg-[#0a1a33]/50 border border-slate-200 dark:border-[#4d8ef0]/10 rounded-2xl p-7 transition-all duration-300 group-hover:border-[#4d8ef0]/30 group-hover:bg-white dark:group-hover:bg-[#0a1a33]/80 group-hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] dark:group-hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)] sm:p-5 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[3px] before:bg-gradient-to-b before:from-[#4d8ef0] before:to-[#38bdf8] before:opacity-0 group-hover:before:opacity-100 before:transition-opacity"
+                whileHover={{ rotateZ: 0.5, scale: 1.015 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 
                 <div className="flex justify-between items-start gap-4 mb-1.5 flex-wrap">
                   <h3 className="font-['Syne'] text-[22px] font-extrabold tracking-tight text-slate-800 dark:text-[#e8f0ff] leading-none sm:text-lg">
@@ -102,7 +113,7 @@ const Experience = () => {
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>

@@ -133,6 +133,25 @@ const About = () => {
               Karachi, PK · Remote
             </div>
           </div>
+
+          {/* Rotating Badge */}
+          <div className="absolute -bottom-6 -right-6 z-40 hidden sm:flex items-center justify-center w-[130px] h-[130px]">
+             <motion.div 
+               className="absolute w-full h-full text-[#4d8ef0]"
+               animate={{ rotate: 360 }}
+               transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+             >
+               <svg viewBox="0 0 100 100" className="w-full h-full font-['Syne'] font-extrabold text-[11px] tracking-[3.5px] uppercase drop-shadow-[0_0_8px_rgba(77,142,240,0.4)]">
+                 <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none" />
+                 <text fill="currentColor">
+                   <textPath href="#circlePath" startOffset="0%">
+                     MERN STACK EXPERT • APTECH FACULTY •
+                   </textPath>
+                 </text>
+               </svg>
+             </motion.div>
+             <div className="absolute w-2 h-2 rounded-full bg-[#4d8ef0] shadow-[0_0_12px_#4d8ef0]" />
+          </div>
         </motion.div>
 
       </div>

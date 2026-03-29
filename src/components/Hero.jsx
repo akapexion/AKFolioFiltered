@@ -1,16 +1,24 @@
 import { Github, Linkedin, Mail, FileText, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen pt-10 flex flex-col justify-center bg-slate-50 dark:bg-[#020917] transition-colors duration-300 px-[5vw] overflow-hidden font-['Outfit'] sm:px-6">
 
       {/* Background Grid Pattern */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.04]"
-        style={{ backgroundImage: `linear-gradient(#4d8ef0 1px, transparent 1px), linear-gradient(90deg, #4d8ef0 1px, transparent 1px)`, backgroundSize: '60px 60px' }}>
-      </div>
+      <motion.div
+        className="absolute inset-0 pointer-events-none opacity-[0.04]"
+        style={{ backgroundImage: `linear-gradient(#4d8ef0 1px, transparent 1px), linear-gradient(90deg, #4d8ef0 1px, transparent 1px)`, backgroundSize: '60px 60px' }}
+        animate={{ backgroundPosition: ["0px 0px", "60px 60px"] }}
+        transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
+      />
 
       {/* Radial Glow */}
-      <div className="absolute top-[30%] left-[10%] w-[600px] h-[400px] bg-[radial-gradient(ellipse,rgba(77,142,240,0.08)_0%,transparent_70%)] pointer-events-none z-0" />
+      <motion.div
+        className="absolute top-[30%] left-[10%] w-[600px] h-[400px] bg-[radial-gradient(ellipse,rgba(77,142,240,0.08)_0%,transparent_70%)] pointer-events-none z-0"
+        animate={{ scale: [1, 1.15, 1], opacity: [0.5, 1, 0.5] }}
+        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+      />
 
       {/* Floating Tag (Right) */}
       <div className="absolute top-9 right-[5vw] hidden sm:flex flex-col items-center gap-[10px] text-[10px] tracking-[2px] uppercase text-[#3d5278] [writing-mode:vertical-rl] animate-in fade-in duration-1000 delay-700">
