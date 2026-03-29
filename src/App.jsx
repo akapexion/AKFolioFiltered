@@ -11,7 +11,7 @@ import ThemeSwitcher from "./context/ThemeSwitcher";
 function ThemedApp() {
   return (
     <>
-      <div className="bg-[#0f172a] text-white scroll-smooth">
+      <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-[#0f172a] dark:text-white scroll-smooth transition-colors duration-300">
         <BrowserRouter>
           <Navbar />
           <Routes>

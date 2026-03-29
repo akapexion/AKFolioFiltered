@@ -42,10 +42,10 @@ const Navbar = () => {
 
   return (
     <header
-      className={` ${theme === "light" ? 'bg-white text-black' : 'bg-slate-950/93'}  fixed w-full z-50 transition-all duration-300 backdrop-blur-xl border-b ${
+      className={`fixed w-full z-50 transition-all duration-300 backdrop-blur-xl border-b bg-white/90 text-slate-900 dark:bg-slate-950/93 dark:text-white ${
         scrolled
-          ? "bg-slate-950/93 border-blue-500/30 shadow-xl"
-          : "bg-slate-950/75 border-blue-500/10"
+          ? "border-slate-200 dark:border-blue-500/30 shadow-md dark:shadow-xl"
+          : "border-transparent dark:border-blue-500/10"
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between h-17 px-6 h-[68px]">

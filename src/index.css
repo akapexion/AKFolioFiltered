@@ -3,3 +3,52 @@
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Base Light Mode variables */
+:root {
+  --navy-950: #ffffff; /* Page background */
+  --navy-950-rgb: 255, 255, 255;
+  --navy-900: #f8fafc; /* Slightly darker background (like slate-50) */
+  --navy-900-rgb: 248, 250, 252;
+  --navy-800: #f1f5f9; /* Card background (like slate-100) */
+  --navy-800-rgb: 241, 245, 249;
+  --navy-700: #e2e8f0; 
+  --navy-700-rgb: 226, 232, 240;
+  --navy-600: #cbd5e1;
+  --navy-600-rgb: 203, 213, 225;
+  --accent-blue: #2563eb; 
+  --accent-blue-rgb: 37, 99, 235;
+  --accent-cyan: #0ea5e9;
+  --accent-cyan-rgb: 14, 165, 233;
+  --accent-glow: rgba(37, 99, 235, 0.2);
+  --text-bright: #0f172a; /* Main headings */
+  --text-muted: #334155;  /* Paragraph text */
+  --text-dim: #64748b;    /* Dimmed text */
+  --border-subtle: rgba(15, 23, 42, 0.1);
+  --border-glow: rgba(37, 99, 235, 0.15);
+}
+
+/* Dark Mode Overrides */
+.dark {
+  --navy-950: #020917;
+  --navy-950-rgb: 2, 9, 23;
+  --navy-900: #050f1f;
+  --navy-900-rgb: 5, 15, 31;
+  --navy-800: #0a1a33;
+  --navy-800-rgb: 10, 26, 51;
+  --navy-700: #0e2347;
+  --navy-700-rgb: 14, 35, 71;
+  --navy-600: #133060;
+  --navy-600-rgb: 19, 48, 96;
+  --accent-blue: #4d8ef0;
+  --accent-blue-rgb: 77, 142, 240;
+  --accent-cyan: #38bdf8;
+  --accent-cyan-rgb: 56, 189, 248;
+  --accent-glow: rgba(77, 142, 240, 0.35);
+  --text-bright: #e8f0ff;
+  --text-muted: #6b84ad;
+  --text-dim: #3d5278;
+  --border-subtle: rgba(77, 142, 240, 0.12);
+  --border-glow: rgba(77, 142, 240, 0.28);
+}

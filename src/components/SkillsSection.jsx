@@ -1,25 +1,25 @@
 import { motion } from "framer-motion";
-import { Layout, Server, GraduationCap } from "lucide-react";
+import { Layout, Server, Terminal } from "lucide-react";
 
 const Skills = () => {
   const categories = [
     {
-      title: "Frontend",
+      title: "Frontend & UI",
       icon: Layout,
-      description: "Crafting responsive, performant user interfaces with modern tooling.",
-      tech: ["React", "Next.js", "Tailwind CSS", "Redux"],
+      description: "Crafting responsive, performant user interfaces with modern styling frameworks.",
+      tech: ["React", "Tailwind CSS", "DaisyUI"],
     },
     {
-      title: "Backend",
+      title: "Backend & Databases",
       icon: Server,
       description: "Building robust APIs and scalable server-side architectures.",
-      tech: ["Node.js", "Express.js", "MongoDB", "PostgreSQL"],
+      tech: ["Node.js", "Express", "Raw PHP", "Laravel", "SQL", "NoSQL Databases"],
     },
     {
-      title: "Education",
-      icon: GraduationCap,
-      description: "Shaping developers through structured mentorship and curriculum design.",
-      tech: ["Curriculum Dev", "Mentorship", "Technical Training"],
+      title: "Tools & AI",
+      icon: Terminal,
+      description: "Leveraging version control and advanced AI to turbocharge development workflows.",
+      tech: ["Git", "GitHub", "Claude", "Gemini", "Grok", "Perplexity"],
     },
   ];
 
@@ -27,22 +27,6 @@ const Skills = () => {
     <>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap');
-
-        :root {
-          --navy-950: #020917;
-          --navy-900: #050f1f;
-          --navy-800: #0a1a33;
-          --navy-700: #0e2347;
-          --navy-600: #133060;
-          --accent-blue: #4d8ef0;
-          --accent-cyan: #38bdf8;
-          --accent-glow: rgba(77, 142, 240, 0.35);
-          --text-bright: #e8f0ff;
-          --text-muted: #6b84ad;
-          --text-dim: #3d5278;
-          --border-subtle: rgba(77, 142, 240, 0.12);
-          --border-glow: rgba(77, 142, 240, 0.28);
-        }
 
         .skills-section {
           padding: 120px 0;
@@ -52,19 +36,17 @@ const Skills = () => {
           font-family: 'Outfit', sans-serif;
         }
 
-        /* Grid bg */
         .skills-section::before {
           content: '';
           position: absolute;
           inset: 0;
           background-image:
-            linear-gradient(rgba(77, 142, 240, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(77, 142, 240, 0.03) 1px, transparent 1px);
+            linear-gradient(rgba(var(--accent-blue-rgb), 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(var(--accent-blue-rgb), 0.03) 1px, transparent 1px);
           background-size: 60px 60px;
           pointer-events: none;
         }
 
-        /* Center glow */
         .skills-section::after {
           content: '';
           position: absolute;
@@ -73,7 +55,7 @@ const Skills = () => {
           transform: translateX(-50%);
           width: 700px;
           height: 400px;
-          background: radial-gradient(ellipse, rgba(77, 142, 240, 0.06) 0%, transparent 70%);
+          background: radial-gradient(ellipse, rgba(var(--accent-blue-rgb), 0.06) 0%, transparent 70%);
           pointer-events: none;
         }
 
@@ -129,10 +111,9 @@ const Skills = () => {
           gap: 24px;
         }
 
-        /* Card */
         .skill-card {
           position: relative;
-          background: rgba(10, 26, 51, 0.5);
+          background: rgba(var(--navy-800-rgb), 0.5);
           border: 1px solid var(--border-subtle);
           border-radius: 20px;
           padding: 32px;
@@ -154,7 +135,6 @@ const Skills = () => {
           transition: opacity 0.35s ease;
         }
 
-        /* Inner corner glow */
         .skill-card::after {
           content: '';
           position: absolute;
@@ -162,7 +142,7 @@ const Skills = () => {
           right: -40px;
           width: 120px;
           height: 120px;
-          background: radial-gradient(ellipse, rgba(77, 142, 240, 0.12) 0%, transparent 70%);
+          background: radial-gradient(ellipse, rgba(var(--accent-blue-rgb), 0.12) 0%, transparent 70%);
           border-radius: 50%;
           opacity: 0;
           transition: opacity 0.4s ease;
@@ -170,8 +150,8 @@ const Skills = () => {
 
         .skill-card:hover {
           border-color: var(--border-glow);
-          background: rgba(10, 26, 51, 0.85);
-          box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--border-subtle);
+          background: rgba(var(--navy-800-rgb), 0.85);
+          box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1), 0 0 0 1px var(--border-subtle);
           transform: translateY(-6px);
         }
 
@@ -182,7 +162,7 @@ const Skills = () => {
         .card-icon-box {
           width: 46px;
           height: 46px;
-          background: rgba(77, 142, 240, 0.1);
+          background: rgba(var(--accent-blue-rgb), 0.1);
           border: 1px solid var(--border-subtle);
           border-radius: 12px;
           display: flex;
@@ -194,9 +174,9 @@ const Skills = () => {
         }
 
         .skill-card:hover .card-icon-box {
-          background: rgba(77, 142, 240, 0.16);
+          background: rgba(var(--accent-blue-rgb), 0.16);
           border-color: var(--border-glow);
-          box-shadow: 0 0 16px rgba(77, 142, 240, 0.2);
+          box-shadow: 0 0 16px rgba(var(--accent-blue-rgb), 0.2);
           color: var(--accent-cyan);
         }
 
@@ -250,7 +230,7 @@ const Skills = () => {
           letter-spacing: 1px;
           text-transform: uppercase;
           color: var(--text-muted);
-          background: rgba(77, 142, 240, 0.06);
+          background: rgba(var(--accent-blue-rgb), 0.06);
           border: 1px solid var(--border-subtle);
           padding: 6px 12px;
           border-radius: 8px;
@@ -261,16 +241,16 @@ const Skills = () => {
 
         .skill-card:hover .tech-chip {
           color: var(--text-bright);
-          border-color: rgba(77, 142, 240, 0.22);
-          background: rgba(77, 142, 240, 0.1);
+          border-color: rgba(var(--accent-blue-rgb), 0.22);
+          background: rgba(var(--accent-blue-rgb), 0.1);
         }
 
         .tech-chip:hover {
           color: var(--accent-cyan) !important;
           border-color: var(--accent-cyan) !important;
-          background: rgba(56, 189, 248, 0.08) !important;
+          background: rgba(var(--accent-cyan-rgb), 0.08) !important;
           transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(56, 189, 248, 0.12);
+          box-shadow: 0 4px 12px rgba(var(--accent-cyan-rgb), 0.12);
         }
 
         @media (max-width: 1024px) {

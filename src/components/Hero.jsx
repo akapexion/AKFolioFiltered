@@ -2,11 +2,11 @@ import { Github, Linkedin, Mail, FileText, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen pt-10 flex flex-col justify-center bg-[#020917] px-[5vw] overflow-hidden font-['Outfit'] sm:px-6">
-      
+    <section className="relative min-h-screen pt-10 flex flex-col justify-center bg-slate-50 dark:bg-[#020917] transition-colors duration-300 px-[5vw] overflow-hidden font-['Outfit'] sm:px-6">
+
       {/* Background Grid Pattern */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.04]" 
-           style={{ backgroundImage: `linear-gradient(#4d8ef0 1px, transparent 1px), linear-gradient(90deg, #4d8ef0 1px, transparent 1px)`, backgroundSize: '60px 60px' }}>
+      <div className="absolute inset-0 pointer-events-none opacity-[0.04]"
+        style={{ backgroundImage: `linear-gradient(#4d8ef0 1px, transparent 1px), linear-gradient(90deg, #4d8ef0 1px, transparent 1px)`, backgroundSize: '60px 60px' }}>
       </div>
 
       {/* Radial Glow */}
@@ -19,15 +19,15 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 max-w-[1100px] animate-in fade-in slide-in-from-bottom-5 duration-700">
-        
+
         {/* Status Badge */}
-        <div className="inline-flex items-center gap-2 bg-[#0a1a33]/90 border border-[#4d8ef0]/30 rounded-full py-1.5 pl-2 pr-3.5 mb-8 font-['DM_Mono'] text-[11px] tracking-[1.5px] uppercase text-[#6b84ad]">
+        <div className="inline-flex items-center gap-2 bg-slate-200 dark:bg-[#0a1a33]/90 border border-[#4d8ef0]/30 rounded-full py-1.5 pl-2 pr-3.5 mb-8 font-['DM_Mono'] text-[11px] tracking-[1.5px] uppercase text-slate-700 dark:text-[#6b84ad]">
           <div className="w-[7px] h-[7px] bg-[#22c55e] rounded-full shadow-[0_0_8px_#22c55e] animate-pulse" />
           Available for work
         </div>
 
         {/* Heading */}
-        <h1 className="font-['Syne'] text-[clamp(56px,9vw,110px)] font-extrabold leading-[0.92] tracking-[-2px] uppercase text-[#e8f0ff] m-0 mb-2">
+        <h1 className="font-['Syne'] text-[clamp(56px,9vw,110px)] font-extrabold leading-[0.92] tracking-[-2px] uppercase text-slate-900 dark:text-[#e8f0ff] m-0 mb-2">
           Asad
           <span className="relative block bg-gradient-to-r from-[#4d8ef0] to-[#38bdf8] bg-clip-text text-transparent">
             Khan
@@ -41,10 +41,10 @@ const Hero = () => {
         <div className="w-20 h-[2px] bg-gradient-to-r from-[#4d8ef0] to-transparent my-7" />
 
         {/* Description */}
-        <p className="font-['Outfit'] text-[clamp(15px,1.5vw,18px)] font-light leading-relaxed text-[#6b84ad] max-w-[580px]">
-          Associate Faculty at <span className="text-[#38bdf8] font-medium">Aptech</span> & Former 
-          Software Developer at <span className="text-[#4d8ef0] font-medium">Time Global Tech</span>. 
-          MERN Stack specialist focused on building scalable web solutions and 
+        <p className="font-['Outfit'] text-[clamp(15px,1.5vw,18px)] font-light leading-relaxed text-slate-600 dark:text-[#6b84ad] max-w-[580px]">
+          Associate Faculty at <span className="text-[#38bdf8] font-medium">Aptech</span> & Former
+          Software Developer at <span className="text-[#4d8ef0] font-medium">Time Global Tech</span>.
+          MERN Stack specialist focused on building scalable web solutions and
           mentoring the next generation of developers.
         </p>
 
@@ -57,18 +57,22 @@ const Hero = () => {
             <ArrowRight size={14} className="relative z-10" />
           </button>
 
-          <button className="flex items-center gap-2 font-['Syne'] text-[12px] font-bold tracking-[1.5px] uppercase text-[#4d8ef0] bg-transparent border-[1.5px] border-[#4d8ef0]/30 px-6 py-[13px] rounded-full transition-all duration-300 hover:border-[#4d8ef0] hover:bg-[#4d8ef0]/10 hover:-translate-y-0.5 hover:text-white">
+          <button className="flex items-center gap-2 font-['Syne'] text-[12px] font-bold tracking-[1.5px] uppercase text-[#4d8ef0] bg-transparent border-[1.5px] border-[#4d8ef0]/30 px-6 py-[13px] rounded-full transition-all duration-300 hover:border-[#4d8ef0] hover:bg-[#4d8ef0]/10 hover:-translate-y-0.5 dark:hover:text-white">
             <FileText size={14} />
-            <span>Resume</span>
+            <a href="./AsadKhan-FS-web-dev.pdf" target='_blank'>
+              <span>
+                Resume
+              </span>
+            </a>
           </button>
 
           <div className="hidden sm:block w-[1px] h-8 bg-[#4d8ef0]/10 mx-1" />
 
           <div className="flex items-center gap-1">
-            <a href="#" className="w-10 h-10 flex items-center justify-center text-[#3d5278] border border-transparent rounded-[10px] transition-all duration-300 hover:text-[#4d8ef0] hover:border-[#4d8ef0]/30 hover:bg-[#4d8ef0]/10 hover:-translate-y-0.5" aria-label="GitHub">
+            <a href="https://github.com/akapexion" target='_blank' className="w-10 h-10 flex items-center justify-center text-slate-500 dark:text-[#3d5278] border border-transparent rounded-[10px] transition-all duration-300 hover:text-[#4d8ef0] hover:border-[#4d8ef0]/30 hover:bg-[#4d8ef0]/10 hover:-translate-y-0.5" aria-label="GitHub">
               <Github size={18} />
             </a>
-            <a href="#" className="w-10 h-10 flex items-center justify-center text-[#3d5278] border border-transparent rounded-[10px] transition-all duration-300 hover:text-[#4d8ef0] hover:border-[#4d8ef0]/30 hover:bg-[#4d8ef0]/10 hover:-translate-y-0.5" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/asadklm/" target='_blank' className="w-10 h-10 flex items-center justify-center text-slate-500 dark:text-[#3d5278] border border-transparent rounded-[10px] transition-all duration-300 hover:text-[#4d8ef0] hover:border-[#4d8ef0]/30 hover:bg-[#4d8ef0]/10 hover:-translate-y-0.5" aria-label="LinkedIn">
               <Linkedin size={18} />
             </a>
           </div>

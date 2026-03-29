@@ -17,22 +17,6 @@ const Footer = () => {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap');
 
-        :root {
-          --navy-950: #020917;
-          --navy-900: #050f1f;
-          --navy-800: #0a1a33;
-          --navy-700: #0e2347;
-          --navy-600: #133060;
-          --accent-blue: #4d8ef0;
-          --accent-cyan: #38bdf8;
-          --accent-glow: rgba(77, 142, 240, 0.35);
-          --text-bright: #e8f0ff;
-          --text-muted: #6b84ad;
-          --text-dim: #3d5278;
-          --border-subtle: rgba(77, 142, 240, 0.12);
-          --border-glow: rgba(77, 142, 240, 0.28);
-        }
-
         .footer-root {
           font-family: 'Outfit', sans-serif;
           background: var(--navy-900);
@@ -53,7 +37,6 @@ const Footer = () => {
           opacity: 0.5;
         }
 
-        /* Radial bg glow */
         .footer-root::after {
           content: '';
           position: absolute;
@@ -62,7 +45,7 @@ const Footer = () => {
           transform: translateX(-50%);
           width: 700px;
           height: 300px;
-          background: radial-gradient(ellipse, rgba(77, 142, 240, 0.05) 0%, transparent 70%);
+          background: radial-gradient(ellipse, rgba(var(--accent-blue-rgb), 0.05) 0%, transparent 70%);
           pointer-events: none;
         }
 
@@ -100,7 +83,7 @@ const Footer = () => {
           justify-content: center;
           box-shadow: 0 0 20px var(--accent-glow);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
-          border: 1px solid rgba(77, 142, 240, 0.3);
+          border: 1px solid rgba(var(--accent-blue-rgb), 0.3);
         }
 
         .footer-brand-logo:hover .logo-icon {
@@ -137,7 +120,7 @@ const Footer = () => {
           letter-spacing: 1.5px;
           text-transform: uppercase;
           color: var(--text-dim);
-          background: rgba(10, 26, 51, 0.8);
+          background: rgba(var(--navy-800-rgb), 0.8);
           border: 1px solid var(--border-subtle);
           padding: 6px 12px;
           border-radius: 100px;
@@ -220,7 +203,7 @@ const Footer = () => {
         .social-icon-wrap {
           width: 36px;
           height: 36px;
-          background: rgba(10, 26, 51, 0.8);
+          background: rgba(var(--navy-800-rgb), 0.8);
           border: 1px solid var(--border-subtle);
           border-radius: 10px;
           display: flex;
@@ -233,15 +216,15 @@ const Footer = () => {
 
         .social-link:hover {
           color: var(--text-bright);
-          background: rgba(77, 142, 240, 0.06);
+          background: rgba(var(--accent-blue-rgb), 0.06);
           border-color: var(--border-subtle);
         }
 
         .social-link:hover .social-icon-wrap {
-          background: rgba(77, 142, 240, 0.12);
+          background: rgba(var(--accent-blue-rgb), 0.12);
           border-color: var(--border-glow);
           color: var(--accent-blue);
-          box-shadow: 0 0 12px rgba(77, 142, 240, 0.2);
+          box-shadow: 0 0 12px rgba(var(--accent-blue-rgb), 0.2);
         }
 
         /* Bottom bar */
@@ -342,15 +325,15 @@ const Footer = () => {
             <div>
               <h3 className="footer-col-title">Socials</h3>
               <div>
-                <a href="https://github.com/yourusername" className="social-link">
+                <a href="https://github.com/akapexion" target="_blank" rel="noopener noreferrer" className="social-link">
                   <div className="social-icon-wrap"><Github size={17} /></div>
                   GitHub
                 </a>
-                <a href="https://linkedin.com/in/yourusername" className="social-link">
+                <a href="https://linkedin.com/in/asadklm" target="_blank" rel="noopener noreferrer" className="social-link">
                   <div className="social-icon-wrap"><Linkedin size={17} /></div>
                   LinkedIn
                 </a>
-                <a href="mailto:asad@example.com" className="social-link">
+                <a href="mailto:asadklm30@gmail.com" className="social-link">
                   <div className="social-icon-wrap"><Mail size={17} /></div>
                   Email
                 </a>

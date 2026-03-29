@@ -4,27 +4,36 @@ import { Briefcase, ArrowUpRight } from "lucide-react";
 const Experience = () => {
   const jobs = [
     {
-      company: "Aptech",
-      role: "Associate Faculty",
-      period: "Early 2026 — Present",
+      company: "Aptech Learning",
+      role: "Associate Faculty - MERN Stack",
+      period: "Jun 2024 - Present",
       tag: "Current",
       description:
-        "Leading technical modules for MERN stack development, mentoring students through semester projects, and managing curriculum delivery.",
-      skills: ["React", "Node.js", "MongoDB", "Curriculum Design"],
+        "Deliver interactive lectures and hands-on labs on web development. Develop curriculum-aligned content and evaluate academic performance.",
+      skills: ["MERN Stack", "Mentorship", "Curriculum Design"],
     },
     {
       company: "Time Global Tech",
-      role: "Software Developer",
-      period: "Previous",
+      role: "Web Developer, MERN Stack",
+      period: "Nov 2023 - May 2024",
       tag: null,
       description:
-        "Developed and maintained production-level web applications using MongoDB, Express, React, and Node.js.",
-      skills: ["Express", "REST APIs", "React", "MongoDB"],
+        "Designed scaled web-based solutions. Collaborated with teams for feature development and maintained efficient code using modern development best practices.",
+      skills: ["React", "Node.js", "Express", "MongoDB"],
+    },
+    {
+      company: "Hebe Inc.",
+      role: "Customer Service Representative",
+      period: "May 2023 - Oct 2023",
+      tag: null,
+      description:
+        "Promoted and sold software products to boost revenue. Conducted client demos, negotiated deals, and provided post-sales support.",
+      skills: ["Technical Sales", "Client Support", "Negotiation"],
     },
   ];
 
   return (
-    <section id="experience" className="relative py-[120px] bg-[#050f1f] overflow-hidden font-['Outfit'] sm:py-20">
+    <section id="experience" className="relative py-[120px] bg-slate-50 dark:bg-[#050f1f] transition-colors duration-300 overflow-hidden font-['Outfit'] sm:py-20">
       
       {/* Background Grid & Glow */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
@@ -37,7 +46,7 @@ const Experience = () => {
         <div className="inline-flex items-center gap-2 font-['DM_Mono'] text-[10px] tracking-[3px] uppercase text-[#4d8ef0] mb-4 before:content-[''] before:w-6 before:h-[1px] before:bg-[#4d8ef0]">
           Career
         </div>
-        <h2 className="font-['Syne'] text-[clamp(32px,4vw,48px)] font-extrabold tracking-tighter text-[#e8f0ff] mb-16 leading-[1.1]">
+        <h2 className="font-['Syne'] text-[clamp(32px,4vw,48px)] font-extrabold tracking-tighter text-slate-900 dark:text-[#e8f0ff] mb-16 leading-[1.1]">
           Work <span className="bg-gradient-to-r from-[#4d8ef0] to-[#38bdf8] bg-clip-text text-transparent">Experience</span>
         </h2>
 
@@ -55,14 +64,14 @@ const Experience = () => {
             >
               {/* Timeline Node */}
               <div className="relative z-10 pt-1.5 flex flex-col items-center">
-                <div className="w-3.5 h-3.5 rounded-full bg-[#050f1f] border-2 border-[#4d8ef0] shadow-[0_0_10px_rgba(77,142,240,0.35)] shrink-0 transition-all duration-300 group-hover:bg-[#4d8ef0] group-hover:scale-120 group-hover:shadow-[0_0_20px_rgba(77,142,240,0.35)]" />
+                <div className="w-3.5 h-3.5 rounded-full bg-slate-100 dark:bg-[#050f1f] border-2 border-[#4d8ef0] shadow-[0_0_10px_rgba(77,142,240,0.35)] shrink-0 transition-all duration-300 group-hover:bg-[#4d8ef0] group-hover:scale-120 group-hover:shadow-[0_0_20px_rgba(77,142,240,0.35)]" />
               </div>
 
               {/* Card */}
-              <div className="relative overflow-hidden bg-[#0a1a33]/50 border border-[#4d8ef0]/10 rounded-2xl p-7 transition-all duration-300 group-hover:border-[#4d8ef0]/30 group-hover:bg-[#0a1a33]/80 group-hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)] group-hover:translate-x-1 sm:p-5 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[3px] before:bg-gradient-to-b before:from-[#4d8ef0] before:to-[#38bdf8] before:opacity-0 group-hover:before:opacity-100 before:transition-opacity">
+              <div className="relative overflow-hidden bg-white/70 dark:bg-[#0a1a33]/50 border border-slate-200 dark:border-[#4d8ef0]/10 rounded-2xl p-7 transition-all duration-300 group-hover:border-[#4d8ef0]/30 group-hover:bg-white dark:group-hover:bg-[#0a1a33]/80 group-hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] dark:group-hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)] group-hover:translate-x-1 sm:p-5 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[3px] before:bg-gradient-to-b before:from-[#4d8ef0] before:to-[#38bdf8] before:opacity-0 group-hover:before:opacity-100 before:transition-opacity">
                 
                 <div className="flex justify-between items-start gap-4 mb-1.5 flex-wrap">
-                  <h3 className="font-['Syne'] text-[22px] font-extrabold tracking-tight text-[#e8f0ff] leading-none sm:text-lg">
+                  <h3 className="font-['Syne'] text-[22px] font-extrabold tracking-tight text-slate-800 dark:text-[#e8f0ff] leading-none sm:text-lg">
                     {job.company}
                   </h3>
                   

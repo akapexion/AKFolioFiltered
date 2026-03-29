@@ -7,22 +7,6 @@ const Contact = () => {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap');
 
-        :root {
-          --navy-950: #020917;
-          --navy-900: #050f1f;
-          --navy-800: #0a1a33;
-          --navy-700: #0e2347;
-          --navy-600: #133060;
-          --accent-blue: #4d8ef0;
-          --accent-cyan: #38bdf8;
-          --accent-glow: rgba(77, 142, 240, 0.35);
-          --text-bright: #e8f0ff;
-          --text-muted: #6b84ad;
-          --text-dim: #3d5278;
-          --border-subtle: rgba(77, 142, 240, 0.12);
-          --border-glow: rgba(77, 142, 240, 0.28);
-        }
-
         .contact-section {
           padding: 140px 0 100px;
           background: var(--navy-950);
@@ -44,7 +28,6 @@ const Contact = () => {
           opacity: 0.5;
         }
 
-        /* Central radial glow */
         .contact-section::after {
           content: '';
           position: absolute;
@@ -53,7 +36,7 @@ const Contact = () => {
           transform: translateX(-50%);
           width: 800px;
           height: 500px;
-          background: radial-gradient(ellipse, rgba(77, 142, 240, 0.07) 0%, transparent 65%);
+          background: radial-gradient(ellipse, rgba(var(--accent-blue-rgb), 0.07) 0%, transparent 65%);
           pointer-events: none;
         }
 
@@ -207,7 +190,7 @@ const Contact = () => {
 
         .btn-email:hover {
           transform: translateY(-3px);
-          box-shadow: 0 10px 40px rgba(77, 142, 240, 0.55);
+          box-shadow: 0 10px 40px rgba(var(--accent-blue-rgb), 0.35);
         }
 
         .btn-email:hover::before { opacity: 1; }
@@ -235,7 +218,7 @@ const Contact = () => {
 
         .btn-ghost:hover {
           border-color: var(--accent-blue);
-          background: rgba(77, 142, 240, 0.08);
+          background: rgba(var(--accent-blue-rgb), 0.08);
           color: white;
           transform: translateY(-3px);
         }
@@ -276,7 +259,7 @@ const Contact = () => {
           align-items: center;
           gap: 10px;
           padding: 12px 20px;
-          background: rgba(10, 26, 51, 0.6);
+          background: rgba(var(--navy-800-rgb), 0.6);
           border: 1px solid var(--border-subtle);
           border-radius: 12px;
           font-size: 13px;
@@ -293,10 +276,10 @@ const Contact = () => {
 
         .social-card:hover {
           border-color: var(--border-glow);
-          background: rgba(77, 142, 240, 0.08);
+          background: rgba(var(--accent-blue-rgb), 0.08);
           color: var(--text-bright);
           transform: translateY(-2px);
-          box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+          box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
         .social-card:hover svg {
@@ -342,14 +325,14 @@ const Contact = () => {
             </div>
 
             <div className="contact-actions">
-              <a href="mailto:your@email.com" className="btn-email">
+              <a href="mailto:asadklm30@gmail.com" className="btn-email">
                 <Mail size={15} />
                 <span>Say Hello</span>
                 <ArrowUpRight size={14} />
               </a>
-              <a href="#" className="btn-ghost">
+              <a href="tel:+923482237240" className="btn-ghost">
                 <MessageSquare size={14} />
-                <span>Schedule a Call</span>
+                <span>+92 3482237240</span>
               </a>
             </div>
 
@@ -358,11 +341,11 @@ const Contact = () => {
             </div>
 
             <div className="contact-socials">
-              <a href="https://github.com/yourusername" className="social-card">
+              <a href="https://github.com/akapexion" target="_blank" rel="noopener noreferrer" className="social-card">
                 <Github size={16} />
                 GitHub
               </a>
-              <a href="https://linkedin.com/in/yourusername" className="social-card">
+              <a href="https://linkedin.com/in/asadklm" target="_blank" rel="noopener noreferrer" className="social-card">
                 <Linkedin size={16} />
                 LinkedIn
               </a>

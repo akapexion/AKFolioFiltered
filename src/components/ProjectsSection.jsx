@@ -5,62 +5,92 @@ import { Github, ExternalLink, Code2 } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "Campus Connect",
-      desc: "A centralized event management ecosystem. Integrated real-time notifications and role-based access control for 10,000+ potential campus users.",
+      title: "Strativa ERP System",
+      desc: "Built a MERN-based HR ERP system with role-based access control to streamline organizational workflows, including employee management and multi-level approvals.",
       tech: ["MongoDB", "Express", "React", "Node.js"],
-      image: "https://images.unsplash.com/photo-1523240715630-97fbb02128b7?auto=format&fit=crop&q=80&w=800",
-      github: "#",
-      live: "#",
+      image: "./strativa-erp.png",
+      github: "https://github.com/akapexion/strativa-erp",
+      live: "",
       number: "01",
     },
     {
-      title: "Student Support System",
-      desc: "A ticketing resolution platform built to streamline faculty-student communication. Reduced issue resolution time by 40% through automated routing.",
-      tech: ["React.js", "Firebase", "Tailwind CSS", "Framer Motion"],
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800",
-      github: "#",
-      live: "#",
+      title: "Fitness Tracker",
+      desc: "Built a fitness tracking app enabling users to log workouts, monitor nutrition via calorie-based entries, and visualize performance stats on an interactive dashboard.",
+      tech: ["MongoDB", "Express", "React", "Node.js"],
+      image: "./fitness-tracker.png",
+      github: "https://github.com/akapexion/sep-mern",
+      live: "",
       number: "02",
     },
     {
-      title: "Revy Cars",
-      desc: "A premium automotive showcase platform focusing on high-fidelity UI/UX and smooth performance metrics for car enthusiasts.",
-      tech: ["Next.js", "Three.js", "Tailwind", "GSAP"],
-      image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=800",
-      github: "#",
-      live: "#",
+      title: "Wellnex Systems",
+      desc: "Designed a modern, fully responsive user interface with advanced, high-quality animations for enhanced user engagement.",
+      tech: ["React", "Tailwind CSS"],
+      image: "./wellnex-system.png",
+      github: "https://github.com/akapexion/wellnex-system",
+      live: "https://wellnex-one.vercel.app",
       number: "03",
+    },
+    {
+      title: "Campus Connect",
+      desc: "UI design for college events updates. A fully responsive system to manage and display campus activities.",
+      tech: ["React", "Custom CSS"],
+      image: "./campus-connect.png",
+      github: "https://github.com/akapexion/techwiz-college-management",
+      live: "https://techwiz-college-management.vercel.app",
+      number: "04",
+    },
+    {
+      title: "Paper Management System",
+      desc: "Paper workflow management UI design featuring fully responsive layouts and analytical data visualization.",
+      tech: ["React", "Tailwind CSS", "Chart.js"],
+      image: "./paper-sys.png",
+      github: "https://github.com/akapexion/paper-sys",
+      live: "https://paper-sys.vercel.app",
+      number: "05",
+    },
+    {
+      title: "Student Support System",
+      desc: "Full management system for student support, completely digitizing resolutions for Aptech SFC's project department.",
+      tech: ["PHP", "MySQL"],
+      image: "./student-support-system.png",
+      github: "https://github.com/akapexion/TNDD",
+      live: "",
+      number: "06",
+    },
+    {
+      title: "LUXRIDE",
+      desc: "Premium cars web UI focusing on modern automotive design principles and fully responsive presentation.",
+      tech: ["React", "Tailwind CSS"],
+      image: "./luxride-official.png",
+      github: "https://github.com/akapexion/luxride-official",
+      live: "https://luxride-official.vercel.app",
+      number: "07",
+    },
+    {
+      title: "NexStore",
+      desc: "A MERN stack e-commerce store with full shopping capabilities, dynamic product listings, and scalable database architecture.",
+      tech: ["React", "Node.js", "Express", "MongoDB"],
+      image: "./NexStore.png",
+      github: "https://github.com/akapexion/MERN-EStore",
+      live: "",
+      number: "08",
     },
   ];
 
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap');
 
-        :root {
-          --navy-950: #020917;
-          --navy-900: #050f1f;
-          --navy-800: #0a1a33;
-          --navy-700: #0e2347;
-          --navy-600: #133060;
-          --accent-blue: #4d8ef0;
-          --accent-cyan: #38bdf8;
-          --accent-glow: rgba(77, 142, 240, 0.35);
-          --text-bright: #e8f0ff;
-          --text-muted: #6b84ad;
-          --text-dim: #3d5278;
-          --border-subtle: rgba(77, 142, 240, 0.12);
-          --border-glow: rgba(77, 142, 240, 0.28);
-        }
-
-        .projects-section {
-          padding: 120px 0;
-          background: var(--navy-950);
-          position: relative;
-          overflow: hidden;
-          font-family: 'Outfit', sans-serif;
-        }
+          .projects-section {
+            padding: 120px 0;
+            background: var(--navy-950);
+            position: relative;
+            overflow: hidden;
+            font-family: 'Outfit', sans-serif;
+            transition: background-color 0.3s ease;
+          }
 
         /* Grid bg */
         .projects-section::before {
@@ -74,16 +104,15 @@ const Projects = () => {
           pointer-events: none;
         }
 
-        /* Top-right decorative glow */
-        .projects-glow {
-          position: absolute;
-          top: -60px;
-          right: -80px;
-          width: 500px;
-          height: 500px;
-          background: radial-gradient(ellipse, rgba(77, 142, 240, 0.07) 0%, transparent 65%);
-          pointer-events: none;
-        }
+          .projects-glow {
+            position: absolute;
+            top: -60px;
+            right: -80px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(ellipse, rgba(var(--accent-blue-rgb), 0.07) 0%, transparent 65%);
+            pointer-events: none;
+          }
 
         .projects-inner {
           max-width: 1280px;
@@ -157,11 +186,11 @@ const Projects = () => {
           align-self: flex-end;
         }
 
-        .header-github-link:hover {
-          color: var(--accent-blue);
-          border-color: var(--border-glow);
-          background: rgba(77, 142, 240, 0.07);
-        }
+          .header-github-link:hover {
+            color: var(--accent-blue);
+            border-color: var(--border-glow);
+            background: rgba(var(--accent-blue-rgb), 0.07);
+          }
 
         /* Projects grid */
         .projects-grid {
@@ -170,17 +199,17 @@ const Projects = () => {
           gap: 24px;
         }
 
-        /* Project card */
-        .project-card {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          background: rgba(10, 26, 51, 0.5);
-          border: 1px solid var(--border-subtle);
-          border-radius: 20px;
-          overflow: hidden;
-          transition: all 0.4s ease;
-        }
+          /* Project card */
+          .project-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background: rgba(var(--navy-800-rgb), 0.5);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+          }
 
         .project-card:hover {
           border-color: var(--border-glow);
@@ -214,25 +243,25 @@ const Projects = () => {
           top: 14px;
           left: 16px;
           font-family: 'Syne', sans-serif;
-          font-size: 11px;
-          font-weight: 800;
-          letter-spacing: 2px;
-          color: rgba(255,255,255,0.5);
-          background: rgba(5, 15, 31, 0.7);
-          backdrop-filter: blur(8px);
-          border: 1px solid var(--border-subtle);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            background: rgba(var(--navy-900-rgb), 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-subtle);
           padding: 4px 10px;
           border-radius: 100px;
           z-index: 2;
         }
 
         /* Hover overlay with links */
-        .card-overlay {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(160deg, rgba(19, 48, 96, 0.7), rgba(2, 9, 23, 0.75));
-          opacity: 0;
-          transition: opacity 0.4s ease;
+          .card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(var(--navy-600-rgb), 0.7), rgba(var(--navy-950-rgb), 0.75));
+            opacity: 0;
+            transition: opacity 0.4s ease;
           z-index: 3;
           display: flex;
           align-items: center;
@@ -244,14 +273,14 @@ const Projects = () => {
           opacity: 1;
         }
 
-        .overlay-btn {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 44px;
-          height: 44px;
-          background: rgba(5, 15, 31, 0.85);
-          backdrop-filter: blur(12px);
+          .overlay-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: rgba(var(--navy-900-rgb), 0.85);
+            backdrop-filter: blur(12px);
           border: 1px solid var(--border-glow);
           border-radius: 12px;
           color: var(--text-bright);
@@ -277,16 +306,16 @@ const Projects = () => {
           box-shadow: 0 0 20px var(--accent-glow);
         }
 
-        /* Bottom gradient on image */
-        .card-img-fade {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 60px;
-          background: linear-gradient(transparent, rgba(10, 26, 51, 0.9));
-          z-index: 1;
-        }
+          /* Bottom gradient on image */
+          .card-img-fade {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(transparent, rgba(var(--navy-800-rgb), 0.9));
+            z-index: 1;
+          }
 
         /* Card body */
         .card-body {
@@ -346,24 +375,24 @@ const Projects = () => {
           margin-top: auto;
         }
 
-        .tech-tag {
-          font-family: 'DM Mono', monospace;
-          font-size: 9px;
-          font-weight: 500;
-          letter-spacing: 1.2px;
-          text-transform: uppercase;
-          color: var(--accent-blue);
-          background: rgba(77, 142, 240, 0.08);
-          border: 1px solid var(--border-subtle);
-          padding: 4px 10px;
-          border-radius: 6px;
-          transition: all 0.2s ease;
-        }
+          .tech-tag {
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--accent-blue);
+            background: rgba(var(--accent-blue-rgb), 0.08);
+            border: 1px solid var(--border-subtle);
+            padding: 4px 10px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+          }
 
-        .project-card:hover .tech-tag {
-          border-color: rgba(77, 142, 240, 0.22);
-          background: rgba(77, 142, 240, 0.12);
-        }
+          .project-card:hover .tech-tag {
+            border-color: rgba(var(--accent-blue-rgb), 0.22);
+            background: rgba(var(--accent-blue-rgb), 0.12);
+          }
 
         /* Bottom CTA */
         .projects-cta {
@@ -404,13 +433,13 @@ const Projects = () => {
           transition: all 0.3s ease;
         }
 
-        .cta-github:hover {
-          color: var(--accent-cyan);
-          border-color: var(--border-glow);
-          background: rgba(77, 142, 240, 0.07);
-          transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-        }
+          .cta-github:hover {
+            color: var(--accent-cyan);
+            border-color: var(--border-glow);
+            background: rgba(var(--accent-blue-rgb), 0.07);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+          }
 
         .cta-github svg {
           transition: transform 0.25s ease;
@@ -459,7 +488,7 @@ const Projects = () => {
               </motion.h2>
             </div>
 
-            <a href="https://github.com" className="header-github-link">
+            <a href="https://github.com/akapexion" target="_blank" rel="noopener noreferrer" className="header-github-link">
               <Github size={14} />
               View All on GitHub
             </a>
@@ -482,12 +511,14 @@ const Projects = () => {
                   <img src={project.image} alt={project.title} className="card-img" />
                   <div className="card-img-fade" />
                   <div className="card-overlay">
-                    <a href={project.github} className="overlay-btn" aria-label="GitHub">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="overlay-btn" aria-label="GitHub">
                       <Github size={18} />
                     </a>
-                    <a href={project.live} className="overlay-btn" aria-label="Live Demo">
-                      <ExternalLink size={18} />
-                    </a>
+                    {project.live && (
+                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="overlay-btn" aria-label="Live Demo">
+                        <ExternalLink size={18} />
+                      </a>
+                    )}
                   </div>
                 </div>
 
@@ -518,7 +549,7 @@ const Projects = () => {
           >
             <div className="cta-line" />
             <span className="cta-label">Want to see more?</span>
-            <a href="https://github.com" className="cta-github">
+            <a href="https://github.com/akapexion" target="_blank" rel="noopener noreferrer" className="cta-github">
               <Github size={16} />
               Explore My GitHub
               <ExternalLink size={14} />
